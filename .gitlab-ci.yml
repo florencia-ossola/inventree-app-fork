@@ -17,4 +17,5 @@ release_job:
         with:
           asset_path: ./android/app/release/app-release.apk
           asset_name: APK
+          asset_content_type: application/zip
 
