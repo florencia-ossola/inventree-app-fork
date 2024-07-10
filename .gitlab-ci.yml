@@ -36,7 +36,6 @@ before_script:
   # after that unzipping those tools and
   # then running a series of SDK manager commands to install necessary android SDK packages that'll allow the app to build
 
-
   # Nothing fancy here, just checking sdkManager version
   - sdkmanager --version
 
@@ -63,7 +62,7 @@ assembleDebug:
 
 # Run all tests, if any fails, interrupt the pipeline(fail it)
 debugTests:
-  needs: [lintDebug, assembleDebug]
+  needs: [assembleDebug]
   interruptible: true
   stage: test
   script:
