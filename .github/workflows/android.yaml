@@ -4,13 +4,13 @@ name: Android
 
 on:
   push:
-    branches:
-      - master
+    tags:
+     - '*'
   
 jobs:
 
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
   
     steps:
     - name: Checkout code
@@ -37,4 +37,8 @@ jobs:
     - name: Build for Android
       run: |
         flutter pub get
-        flutter build apk --debug
+        flutter build apk --release
+    - name: Push to releases
+      uses: fossola/release-action@v1
+      with:
+        artifacts: "build/app/outputs/apk/release/app-release.apk
