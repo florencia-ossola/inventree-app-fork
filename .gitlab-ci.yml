@@ -27,9 +27,6 @@ variables:
 
 # Packages installation before running script
 before_script:
-  - sudo apt-get --quiet update --yes
-  - sudo apt-get --quiet install --yes wget unzip
-
   # Setup path as android_home for moving/exporting the downloaded sdk into it
   - export ANDROID_HOME="${PWD}/android-sdk-root"
   # Create a new directory at specified location
