@@ -50,7 +50,7 @@ before_script:
   - sdkmanager "build-tools;${ANDROID_BUILD_TOOLS}"
 
   # Not necessary, but just for surity
-  - chmod +x ./gradlew
+  - chmod +x gradlew
 
 # Basic android and gradle stuff
 # Check linting
