@@ -37,4 +37,10 @@ jobs:
     - name: Build for Android
       run: |
         flutter pub get
-        flutter build apk --debug
+        flutter build apk --release
+        
+    - name: Push to Releases
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "/android/app/release/app-release.apk"
+        token: ${{ secrets.TOKEN }}
