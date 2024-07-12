@@ -1,3 +1,10 @@
+name: Build and Publish Android App
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   build:
     name: Generate APK
