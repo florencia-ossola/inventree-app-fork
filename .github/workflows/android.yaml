@@ -37,6 +37,8 @@ jobs:
     - name: Build for Android
       run: |
         flutter pub get
+        flutter pub outdated
+        flutter pub upgrade
         flutter build apk 
         
     - uses: actions/upload-artifact@v2
