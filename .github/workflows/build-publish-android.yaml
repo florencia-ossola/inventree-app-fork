@@ -20,7 +20,7 @@ jobs:
     - name: Make gradlew executable
       run: chmod +x android/gradlew
     - name: Bundle 'release' with Gradle
-      run: ./gradlew buildRelease
+      run: ./android/gradlew buildRelease
     - name: Sign APK
       id: sign_apk
       uses: r0adkll/sign-android-release@v1
