@@ -36,6 +36,10 @@ jobs:
         python3 collect_translations.py
     - name: Build for Android
       run: |
+        dart pub get
+        flutter pub get
+        flutter pub outdated
+        flutter pub upgrade
         flutter build apk --release
         
     - uses: actions/upload-artifact@v2
