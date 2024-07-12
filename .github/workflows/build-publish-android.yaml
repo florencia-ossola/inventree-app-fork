@@ -19,9 +19,9 @@ jobs:
         cache: gradle
     - name: Init gradle wrapper
       run: |
-        cd android/gradlew
+        cd android
         gradlew init
-        cd ../../
+        cd ../
     - name: Make gradlew executable
       run: chmod +x android/gradlew
     - name: Bundle 'release' with Gradle
