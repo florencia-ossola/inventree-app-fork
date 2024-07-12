@@ -17,8 +17,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-    - name: Bundle 'release' with Gradle
+    - name: Make gradlew executable
       run: chmod +x ./gradlew
+    - name: Bundle 'release' with Gradle
       run: ./gradlew buildRelease
     - name: Sign APK
       id: sign_apk
