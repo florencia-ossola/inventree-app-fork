@@ -36,7 +36,6 @@ jobs:
         python3 collect_translations.py
     - name: Build for Android
       run: |
-        flutter upgrade
         flutter pub get
         flutter pub outdated
         flutter pub upgrade
@@ -44,5 +43,5 @@ jobs:
         
     - uses: actions/upload-artifact@v2
       with:
-        name: app-release-apk
+        name: app-apk
         path: build/app/ouputs/flutter-apk/release-apk.apk
