@@ -34,8 +34,8 @@ jobs:
       run: |
         cd lib/l10n
         python3 collect_translations.py
+    - uses: dart-lang/setup-dart@v1
     - name: Build for Android
-      uses: dart-lang/setup-dart@v1
       run: |
         dart pub get
         flutter pub get
