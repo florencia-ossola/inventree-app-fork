@@ -17,8 +17,6 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-    - name: "Permisos a gradlew"
-      run: chmod +x ./gradlew
     - name: Bundle 'release' with Gradle
       run: ./gradlew buildRelease
     - name: Sign APK
